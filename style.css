@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", monospace;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #FFD151;
+    border-radius: 5%;
+    padding: 30px;
+    text-align: center;
+    animation: menuAnimation 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu h1 {
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.menu p {
+    margin-top: 16px;
+}
+
+.menu button {
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 12px;
+    min-width: 140px;
+    background-color: #EDB230;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s linear;
+}
+
+.menu button:hover {
+    box-shadow: 0 0 0 2px black;
+}
+
+.countdownMenu {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    background-color: #FFD151;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    animation: menuAnimation 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdownMenu h2 {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.pong {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #FFD151;
+    border: 3px black solid;
+    cursor: none;
+    display: none;
+}
+
+.score {
+    position: absolute;
+    color: #EDB230;
+    font-weight: 700;
+    font-size: 8em;
+    margin: 0;
+}
+
+.paddle {
+    position: absolute;
+    top: 180px;
+    width: 14px;
+    height: 140px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+.ball {
+    position: absolute;
+    top: 230px;
+    left: 380px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+/* --- Spielerpunkte --- */
+.pong h1:nth-child(1) {
+    left: 150px;
+}
+
+/* --- Computerpunkte --- */
+.pong h1:nth-child(2) {
+    right: 150px;
+}
+
+/* --- linkes Paddle --- */
+.pong div:nth-child(3) {
+    left: 3px;
+}
+
+/* --- rechtes Paddle --- */
+.pong div:nth-child(4) {
+    right: 3px;
+}
+
+@keyframes menuAnimation {
+    from {
+        transform: translateY(-20px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .menu {
+        height: 40%;
+        width: 80%;
+    }
+}

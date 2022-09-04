@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Ping-Pong</title>
+</head>
+<body onload="startCountdown()">
+    <!-- Countdown starten -->
+    <div class="countdownMenu" id="countdownMenu">
+        <h2>Spiel startet in</h2>
+        <h1 id="countdown">3</h1>
+    </div>
+
+    <!-- Spielfeld -->
+    <div class="pong" id="pong">
+        <h1 class="score" id="playerScore">0</h1>
+        <h1 class="score" id="computerScore">0</h1>
+        <div class="paddle" id="playerPaddle"></div>
+        <div class="paddle" id="computerPaddle"></div>
+        <div class="ball" id="ball"></div>
+    </div>
+
+    <!-- Spielmenü -->
+    <div class="menu" id="gameMenu">
+        <h1>Ping-Pong</h1>
+        <p>Du hast das Spiel pausiert!</p>
+        <p>Wenn du das Spiel weiterspielen möchtest, navigiere auf <strong>Spiel fortsetzen</strong></p>
+        <p>Jedoch, falls du keine Lust mehr hast weiterzuspielen, kannst du mit <strong>Spiel beenden</strong> das Spiel beenden.</p>
+        <button onclick="resumeGame()">Spiel fortsetzen</button>
+        <button onclick="stopGame()">Spiel beenden</button>
+    </div>
+</body>
+<script src="core.js"></script>
+</html>
