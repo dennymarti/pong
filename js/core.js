@@ -41,7 +41,7 @@ function changePage(page) {
 }
 
 function showMenu(menu) {
-    document.querySelector("#" + menu).style.display = "flex";
+    document.querySelector("#" + menu).style.display = "block";
 }
 
 function hideMenu(menu) {

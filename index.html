@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Startseite</title>
 </head>
 <body>
     <!-- Startmenü -->
     <div class="menu" id="startMenu">
-        <h1>Ping-Pong</h1>
-        <p>Willkommen beim Ping-Pong Spiel!</p>
-        <p>Du befindest dich gerade auf der Homeseite.</p>
-        <p>Um das Spiel zu starten, klicke auf <strong>Spiel starten</strong>.</p>
-        <p>Hast aber keine Ahnung wie das Spiel funktioniert, dann navigiere auf <strong>Hilfe</strong>.</p>
-        <p>Viel Spass beim Spielen!</p>
-        <button type="button" onclick="changePage('pong.html')">Spiel starten</button>
-        <button type="button" onclick="changePage('hilfe.html')">Hilfe</button>
+        <h1 class="menu-title">Ping-Pong</h1>
+        <h2 class="menu-subtitle">Willkommen beim Ping-Pong Spiel!</h2>
+        <p class="menu-text">
+            Du befindest dich gerade auf der Startseite. Um das Spiel zu starten, klicke auf <strong>Spiel starten</strong>.
+            Du bist aber neu und hast keine Ahnung wie das Spiel funktioniert? Dann navigiere zu <strong>Hilfe</strong>.
+            Dort werden alle Steuerungen und Funktionen über das Spiel ausführlich beschrieben.
+            Viel Spass beim Spielen!
+        </p>
+        <div class="buttons">
+            <a class="button" href="pong.html">Spiel starten</a>
+            <a class="button" href="hilfe.html">Hilfe</a>
+        </div>
     </div>
 </body>
-<script src="core.js"></script>
+<script src="js/core.js"></script>
 </html>

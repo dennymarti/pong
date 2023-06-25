@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Ping-Pong</title>
 </head>
+
 <body onload="startCountdown()">
     <!-- Countdown starten -->
     <div class="countdownMenu" id="countdownMenu">
@@ -24,13 +25,17 @@
 
     <!-- Spielmenü -->
     <div class="menu" id="gameMenu">
-        <h1>Ping-Pong</h1>
-        <p>Du hast das Spiel pausiert!</p>
-        <p>Wenn du das Spiel weiterspielen möchtest, navigiere auf <strong>Spiel fortsetzen</strong></p>
-        <p>Jedoch, falls du keine Lust mehr hast weiterzuspielen, kannst du mit <strong>Spiel beenden</strong> das Spiel beenden.</p>
-        <button onclick="resumeGame()">Spiel fortsetzen</button>
-        <button onclick="stopGame()">Spiel beenden</button>
+        <h1 class="menu-title">Ping-Pong</h1>
+        <p class="menu-subtitle">Du hast das Spiel pausiert!</p>
+        <p class="menu-text">
+            Wenn du das Spiel weiterspielen möchtest, navigiere auf <strong>Spiel fortsetzen</strong>
+            Jedoch, falls du keine Lust mehr hast weiterzuspielen, kannst du mit <strong>Spiel beenden</strong> das Spiel beenden.
+        </p>
+        <div class="buttons">
+            <a class="button" onclick="resumeGame()">Spiel fortsetzen</a>
+            <a class="button" onclick="stopGame()">Spiel beenden</a>
+        </div>
     </div>
 </body>
-<script src="core.js"></script>
+<script src="js/core.js"></script>
 </html>

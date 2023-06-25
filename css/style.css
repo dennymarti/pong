@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --accent-color: #FFD151;
+    --font-color: #262626;
+}
 
 * {
     padding: 0;
     margin: 0;
-    font-family: "Raleway", monospace;
+    font-family: "Poppins", sans-serif;
 }
 
 html, body {
+    color: var(--font-color);
     width: 100%;
     height: 100%;
     background-color: #EEEEEE;
@@ -19,41 +23,60 @@ html, body {
 
 .menu {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 360px;
+    min-height: 320px;
+    height: fit-content;
     background-color: #FFD151;
     border-radius: 5%;
-    padding: 30px;
+    padding: 1rem 1.75rem;
     text-align: center;
     animation: menuAnimation 2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.menu h1 {
-    font-weight: 900;
-    margin-bottom: 20px;
+.menu-title {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+
 }
 
-.menu p {
+.menu-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menu-text {
+    text-align: justify;
     margin-top: 16px;
 }
 
-.menu button {
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.button {
+    color: var(--font-color);
+    cursor: pointer;
+    display: block;
     font-size: 15px;
-    margin-top: 20px;
+    font-weight: 600;
     padding: 12px;
-    min-width: 140px;
+    min-width: 120px;
+    width: fit-content;
     background-color: #EDB230;
     border: none;
     border-radius: 8px;
     outline: none;
-    transition: all 0.3s linear;
+    text-decoration: none;
+    transition: all 0.1s linear;
 }
 
-.menu button:hover {
-    box-shadow: 0 0 0 2px black;
+.button:hover {
+    transform: scale(1.05);
 }
 
 .countdownMenu {
@@ -133,19 +156,10 @@ html, body {
 }
 
 @keyframes menuAnimation {
-    from {
-        transform: translateY(-20px);
-        opacity: 0.8;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
 }
 
-@media screen and (max-width: 580px) {
+@media only screen and (max-width: 480px) {
     .menu {
-        height: 40%;
-        width: 80%;
+        width: 90%;
     }
 }
