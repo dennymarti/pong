@@ -3,39 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/uno.css">
     <title>Ping-Pong</title>
 </head>
 
 <body onload="startCountdown()">
-    <!-- Countdown starten -->
-    <div class="countdownMenu" id="countdownMenu">
-        <h2>Spiel startet in</h2>
-        <h1 id="countdown">3</h1>
-    </div>
+    <div class="relative flex items-center justify-center w-full min-h-screen h-content">
+        <div class="absolute bg-accent p-7 text-center rounded-xl" id="countdownMenu">
+            <h2 class="text-2xl">Spiel startet in</h2>
+            <h2 class="bg-accent-2 max-w-3rem mx-auto py-1 mt-2 text-3xl rounded-full" id="countdown">3</h2>
+        </div>
 
-    <!-- Spielfeld -->
-    <div class="pong" id="pong">
-        <h1 class="score" id="playerScore">0</h1>
-        <h1 class="score" id="computerScore">0</h1>
-        <div class="paddle" id="playerPaddle"></div>
-        <div class="paddle" id="computerPaddle"></div>
-        <div class="ball" id="ball"></div>
-    </div>
+        <!-- Spielfeld -->
+        <div class="bg-accent cursor-none relative w-full max-w-800px h-500px hidden" id="pong">
+            <h1 class="absolute bg-accent-3 text-8rem left-150px" id="playerScore">0</h1>
+            <h1 class="absolute bg-accent-3 text-8rem right-150px" id="computerScore">0</h1>
+            <div class="absolute top-180px w-14px h-140px bg-black rounded-xl left-1" id="playerPaddle"></div>
+            <div class="absolute top-180px w-14px h-140px bg-black rounded-xl right-1" id="computerPaddle"></div>
+            <div class="absolute top-230px w-40px h-40px bg-white rounded-full" id="ball"></div>
+        </div>
 
-    <!-- Spielmenü -->
-    <div class="menu" id="gameMenu">
-        <h1 class="menu-title">Ping-Pong</h1>
-        <p class="menu-subtitle">Du hast das Spiel pausiert!</p>
-        <p class="menu-text">
-            Wenn du das Spiel weiterspielen möchtest, navigiere auf <strong>Spiel fortsetzen</strong>
-            Jedoch, falls du keine Lust mehr hast weiterzuspielen, kannst du mit <strong>Spiel beenden</strong> das Spiel beenden.
-        </p>
-        <div class="buttons">
-            <a class="button" onclick="resumeGame()">Spiel fortsetzen</a>
-            <a class="button" onclick="stopGame()">Spiel beenden</a>
+        <!-- Spielmenü -->
+        <div class="absolute bg-accent w-full max-w-380px py-6 px-7 text-center rounded-3xl" id="gameMenu">
+            <h1 class="text-4xl mb-4 mt-2">Ping-Pong</h1>
+            <p class="text-lg font-semibold mt-2">Du hast das Spiel pausiert!</p>
+            <p class="mt-4 text-justify">
+                Wenn du das Spiel weiterspielen möchtest, navigiere auf <strong>Spiel fortsetzen</strong>
+                Jedoch, falls du keine Lust mehr hast weiterzuspielen, kannst du mit <strong>Spiel beenden</strong> das Spiel beenden.
+            </p>
+            <div class="relative flex justify-center gap-4 mt-6">
+                <a class="bg-accent-2 cursor-pointer block decoration-none text-15px font-semibold p-3 rounded-lg color-black border min-w-120px transition-transform hover:underline"
+                   onclick="resumeGame()">
+                    Spiel fortsetzen
+                </a>
+                <a class="bg-accent-2 cursor-pointer block decoration-none text-15px font-semibold p-3 rounded-lg color-black border min-w-120px transition-transform hover:underline"
+                   onclick="stopGame()">
+                    Spiel beenden
+                </a>
+            </div>
         </div>
     </div>
+    <!-- Countdown starten -->
+    <script src="js/core.js"></script>
 </body>
-<script src="js/core.js"></script>
 </html>

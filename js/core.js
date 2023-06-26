@@ -181,6 +181,8 @@ function updateGame() {
 
             // Computerintelligenz zurücksetzen
             localizeBall = true;
+
+            updateScore();
         }
     }
 
@@ -188,7 +190,7 @@ function updateGame() {
         if (ballY >= computerPaddleY && ballY <= computerPaddleY + paddleHeight) {
             ballSpeedX = -ballSpeedX;
             // Intelligenz des Computers anpassen
-            localizeBallY();
+            trackBallY();
 
             // Ball Geschwindigkeit erhöhen
             ballSpeedX -= 0.2;
@@ -202,6 +204,8 @@ function updateGame() {
 
             // Computerintelligenz zurücksetzen
             localizeBall = true;
+
+            updateScore();
         }
     }
 
@@ -215,9 +219,6 @@ function updateGame() {
 
     ball.style.top = ballY + "px";
     ball.style.left = ballX + "px";
-
-    // Punkte aktualisieren
-    updateScore();
 }
 
 // Hotkeys
@@ -279,7 +280,7 @@ function updateScore() {
     document.querySelector("#computerScore").innerHTML = computerScore;
 }
 
-function localizeBallY() {
+function trackBallY() {
     let random = Math.floor(Math.random() * 20) + 1;
     // 5% Wahrscheinlichkeit (100/20)
     if (random >= 19) {

@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/uno.css">
     <title>Startseite</title>
 </head>
 <body>
-    <!-- Startmenü -->
-    <div class="menu" id="startMenu">
-        <h1 class="menu-title">Ping-Pong</h1>
-        <h2 class="menu-subtitle">Willkommen beim Ping-Pong Spiel!</h2>
-        <p class="menu-text">
-            Du befindest dich gerade auf der Startseite. Um das Spiel zu starten, klicke auf <strong>Spiel starten</strong>.
-            Du bist aber neu und hast keine Ahnung wie das Spiel funktioniert? Dann navigiere zu <strong>Hilfe</strong>.
-            Dort werden alle Steuerungen und Funktionen über das Spiel ausführlich beschrieben.
-            Viel Spass beim Spielen!
-        </p>
-        <div class="buttons">
-            <a class="button" href="pong.html">Spiel starten</a>
-            <a class="button" href="hilfe.html">Hilfe</a>
+    <div class="relative flex items-center justify-center w-full min-h-screen h-content">
+        <div class="relative bg-accent w-full max-w-416px py-6 px-7 text-center rounded-3xl" id="startMenu">
+            <h1 class="text-4xl mb-4 mt-2">Ping-Pong</h1>
+            <h2 class="text-lg font-semibold mt-2">Willkommen beim Ping-Pong Spiel!</h2>
+            <p class="mt-4 text-justify">
+                Du befindest dich gerade auf der Startseite. Um das Spiel zu starten, klicke auf <strong>Spiel starten</strong>.
+                Du bist aber neu und hast keine Ahnung wie das Spiel funktioniert? Dann navigiere zu <strong>Hilfe</strong>.
+                Dort werden alle Steuerungen und Funktionen über das Spiel ausführlich beschrieben.
+                Viel Spass beim Spielen!
+            </p>
+            <div class="relative flex justify-center gap-4 mt-6">
+                <a class="bg-accent-2 cursor-pointer block decoration-none text-15px font-semibold p-3 rounded-lg color-black border min-w-120px transition-transform hover:underline"
+                   href="pong.html">
+                    Spiel starten
+                </a>
+                <a class="bg-accent-2 cursor-pointer block decoration-none text-15px font-semibold p-3 rounded-lg color-black border min-w-120px transition-transform hover:underline"
+                   href="help.html">
+                    Hilfe
+                </a>
+            </div>
         </div>
     </div>
+    <script src="js/core.js"></script>
 </body>
-<script src="js/core.js"></script>
 </html>
